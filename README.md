@@ -1,13 +1,12 @@
 # Printf
 
-
 The Printf project is a customized implementation of the printf function in the C language. The printf function is a standard library function used to display formatted messages on standard output (usually the console).
 
 ## Table of Contents
 
 -   [Objective](#objective)
 -   [Requirements](#requirements)
--   [Mandatory Tasks](#mandatory tasks)
+-   [MandatoryTasks](#mandatory tasks)
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Authors](#contributors)
