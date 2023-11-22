@@ -5,7 +5,7 @@
  * @...: list of arguments
  * @format: pointer to string
  *
- * Return: int
+ * Return: length of the string
  */
 
 int _printf(const char *format, ...)
