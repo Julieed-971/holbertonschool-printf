@@ -11,6 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
+	int count = 0;
 	int i = 0;
 	int j = 0;
 	spec_t spec_list[] = {
@@ -31,7 +32,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == spec_list[j].c)
 				{
-					spec_list[j].spec(args);
+					count += spec_list[j].spec(args);
 				}
 				j++;
 			}
@@ -43,5 +44,6 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-	return (i);
+
+	return (i + count - 2);
 }
