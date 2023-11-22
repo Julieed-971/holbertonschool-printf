@@ -6,7 +6,7 @@ The Printf project is a customized implementation of the printf function in the 
 
 -   [Objective](#objective)
 -   [Requirements](#requirements)
--   [MandatoryTasks](#mandatory tasks)
+-   [Mandatory Tasks](#mandatory-tasks)
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Authors](#contributors)
