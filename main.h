@@ -24,9 +24,12 @@ typedef struct specifier
 	char c;
 	int (*spec)(va_list);
 } spec_t;
+
 int _putchar(char c);
 int spec_char(va_list args);
 int spec_str(va_list args);
 int spec_percent(va_list args);
 int _printf(const char *format, ...);
+int print_num(va_list args);
+
 #endif
