@@ -6,7 +6,7 @@ The Printf project is a customized implementation of the printf function in the 
 
 -   [Objective](#objective)
 -   [Requirements](#requirements)
--   [MandatoryTasks](#mandatory tasks)
+-   [Mandatory Tasks](#mandatory-tasks)
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Authors](#contributors)
@@ -55,10 +55,6 @@ More information with the command: `man _printf`
 2.  Compile the source files with the following command:
 
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o 0-printf`
-
-``` 
-
-```
 
 ## Authors
 #### Julie Dedieu
