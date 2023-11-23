@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * struct specifier - Structure of a format specifier
@@ -29,6 +30,7 @@ int _putchar(char c);
 int spec_char(va_list args);
 int spec_str(va_list args);
 int spec_percent(va_list args);
+int spec_deci(va_list args);
 int _printf(const char *format, ...);
 int print_num(va_list args);
 

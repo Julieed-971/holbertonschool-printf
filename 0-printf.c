@@ -18,6 +18,8 @@ int _printf(const char *format, ...)
 		{'c', spec_char},
 		{'s', spec_str},
 		{'%', spec_percent},
+		{'d', spec_deci},
+		{'i', spec_deci},
 		{'\0', NULL}
 	};
 
@@ -40,10 +42,13 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else
+		{
 			_putchar(format[i]);
+			count++;
+		}
 		i++;
 	}
 	va_end(args);
 
-	return (i + count - 2);
+	return (count);
 }
