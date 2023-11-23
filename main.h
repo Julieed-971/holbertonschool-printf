@@ -19,6 +19,7 @@
  *	and the format member is a function pointer
  *	poiting to the function that will process the data of that type.
  */
+
 typedef struct specifier
 {
 	char c;
@@ -28,8 +29,7 @@ typedef struct specifier
 int _putchar(char c);
 int spec_char(va_list args);
 int spec_str(va_list args);
-int spec_percent(va_list args);
+int spec_percent(__attribute__((unused))va_list args)
 int _printf(const char *format, ...);
-int print_num(va_list args);
 
 #endif
