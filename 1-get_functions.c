@@ -13,22 +13,25 @@ int spec_deci(va_list args)
 	int i = 0;
 	int digit_number = 0;
 	int digit_string[21];
+	unsigned int abs = 0;
 
 	if (num == 0)
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	if (num < 0)
 	{
+		abs = num * -1;
 		_putchar('-');
-		num *= -1;
 		digit_number++;
 	}
-	while (num != 0)
+	if (num > 0)
+		abs = num;
+	while (abs != 0)
 	{
-		digit_string[i] = (num % 10);
-		num /= 10;
+		digit_string[i] = (abs % 10);
+		abs /= 10;
 		i++;
 	}
 	while (i > 0)
@@ -39,3 +42,4 @@ int spec_deci(va_list args)
 	}
 	return (digit_number);
 }
+
