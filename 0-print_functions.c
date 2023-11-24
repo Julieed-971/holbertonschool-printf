@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * spec_char - write a char
+ * spec_char - write a single character
  * @args: pointer to the arguments list
  *
- * Return: int
+ * Return: length of the arguments list element
  */
 
 int spec_char(va_list args)
@@ -17,10 +17,10 @@ int spec_char(va_list args)
 }
 
 /**
- * spec_str - write a string
+ * spec_str - write a string of characters
  * @args: pointer to the arguments list
  *
- * Return: int
+ * Return: length of the string
  */
 
 int spec_str(va_list args)
@@ -40,10 +40,10 @@ int spec_str(va_list args)
 }
 
 /**
- * spec_percent - write a percentage
+ * spec_percent - write a percentage symbol
  * @args: pointer to the arguments list
  *
- * Return: int
+ * Return: length of the arguments list element
  */
 int spec_percent(__attribute__((unused))va_list args)
 {
