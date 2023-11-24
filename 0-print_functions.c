@@ -9,8 +9,11 @@
 
 int spec_char(va_list args)
 {
+	int count = 0;
+
 	_putchar(va_arg(args, int));
-	return (0);
+	count++;
+	return (count);
 }
 
 /**
@@ -22,14 +25,18 @@ int spec_char(va_list args)
 
 int spec_str(va_list args)
 {
+	int count = 0;
 	char *str = va_arg(args, char *);
 
+	if (str == NULL)
+		str = "(null)";
 	while (*str != '\0')
 	{
 		_putchar(*str);
 		str++;
+		count++;
 	}
-	return (0);
+	return (count);
 }
 
 /**
@@ -40,6 +47,9 @@ int spec_str(va_list args)
  */
 int spec_percent(__attribute__((unused))va_list args)
 {
+	int count = 0;
+
 	_putchar('%');
-	return (0);
+	count++;
+	return (count);
 }
