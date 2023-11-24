@@ -4,7 +4,7 @@
  * spec_deci - convert and write decimal numbers
  * @args: pointer to the arguments list
  *
- * Return: length of the string
+ * Return: length of the string of digits
  */
 
 int spec_deci(va_list args)

@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _printf - write many things
- * @...: list of arguments
+ * _printf - mimic the standard printf function
+ * @...: list of arguments passed to the function
  * @format: pointer to string
  *
  * Return: length of the string
@@ -10,8 +10,9 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0, i = 0, j = 0;
-	spec_t spec_list[] = {{'c', spec_char}, {'s', spec_str},	{'%', spec_percent},
-		{'d', spec_deci}, {'i', spec_deci},	{'\0', NULL}};
+	spec_t spec_list[] = {{'c', spec_char}, {'s', spec_str}, {'%', spec_percent},
+		{'d', spec_deci}, {'i', spec_deci}, {'\0', NULL}};
+
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
