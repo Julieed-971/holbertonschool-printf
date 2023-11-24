@@ -1,38 +1,56 @@
-_PRINTF(1)						Linux Programmer's Manual						PRINTF(1)
+.TH "_PRINTF" "3" "24 November 2023" "_PRINTF MAN PAGE"
 
-NAME
-	_printf
+.SH NAME
+_printf \- write formatted output to stdout
 
-SYNOPSIS
+.SH SYNOPSIS
+\fB#include <main.h>\fR
+.br
+\fBint _printf(const char *format, ...);\fR
 
-	#include "main.h"
+.SH DESCRIPTION
+The \fB_printf\fR function writes formatted output to stdout. It is similar to the standard C \fBprintf\fR function but with a limited set of supported format specifiers.
 
-	int_print(const char *format, ...)
+The format string may contain conversion specifiers, each beginning with a '%' character, followed by a conversion character.
 
-DESCRIPTION
+Supported conversion characters:
+.RS
+.TP
+\fB%c\fR
+Prints a character.
 
-	The function _printf produce output according to a format as described below.
+.TP
+\fB%s\fR
+Prints a string.
 
-OPTIONS
+.TP
+\fB%%\fR
+Prints a percent sign.
 
-	%c Print a single caracter
+.TP
+\fB%d\fR, \fB%i\fR
+Prints an integer.
 
-	%s Print the argument as a string
+.RE
 
-	%% Print a single perecentage sign to the stream
+.SH RETURN VALUE
+Returns the number of characters printed (excluding the null byte used to end the output).
 
-	%i / %d print signed decimal integer
+.SH EXAMPLES
+The following example demonstrates the usage of \fB_printf\fR:
 
-EXAMPLES
-	#include "main.h"
+.BR
+.B #include "main.h"
+.br
+.B int main(void) {
+.B _printf("Hello, %s!\n", "world");
+.B return 0;
+.B }
 
-	_printf("String:[%s]\n", "hello world");
-	Output: String: hello world
+.SH SEE ALSO
+.BR printf (3), putchar(3)
 
-	_printf("integer: %i\n", 10);
-	Output: integer: 10
+.SH AUTHOR
+This man page was written by Julie Dedieu and Saadi Khemchane.
 
-RETURN VALUE
-	On success, printf returns the number of printed characters. If formats is error or NULL returns -1
-
-						2023-11-24						PRINTF(1)
+.SH COPYRIGHT
