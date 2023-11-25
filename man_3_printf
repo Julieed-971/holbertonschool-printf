@@ -1,0 +1,56 @@
+.TH "_PRINTF" "3" "24 November 2023" "_PRINTF MAN PAGE"
+
+.SH NAME
+_printf \- write formatted output to stdout
+
+.SH SYNOPSIS
+\fB#include <main.h>\fR
+.br
+\fBint _printf(const char *format, ...);\fR
+
+.SH DESCRIPTION
+The \fB_printf\fR function writes formatted output to stdout. It is similar to the standard C \fBprintf\fR function but with a limited set of supported format specifiers.
+
+The format string may contain conversion specifiers, each beginning with a '%' character, followed by a conversion character.
+
+Supported conversion characters:
+.RS
+.TP
+\fB%c\fR
+Prints a character.
+
+.TP
+\fB%s\fR
+Prints a string.
+
+.TP
+\fB%%\fR
+Prints a percent sign.
+
+.TP
+\fB%d\fR, \fB%i\fR
+Prints an integer.
+
+.RE
+
+.SH RETURN VALUE
+Returns the number of characters printed (excluding the null byte used to end the output).
+
+.SH EXAMPLES
+The following example demonstrates the usage of \fB_printf\fR:
+
+.BR
+.B #include "main.h"
+.br
+.B int main(void) {
+.B _printf("Hello, %s!\n", "world");
+.B return 0;
+.B }
+
+.SH SEE ALSO
+.BR printf (3), putchar(3)
+
+.SH AUTHOR
+This man page was written by Julie Dedieu and Saadi Khemchane.
+
+.SH COPYRIGHT
