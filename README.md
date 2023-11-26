@@ -1,10 +1,11 @@
-# Printf
+# <p align="center">C - Printf project</p>
 
 The Printf project is a customized implementation of the printf function in the C language. The printf function is a standard library function used to display formatted messages on standard output (usually the console).
 
 ## Table of Contents
 
 -   [Objective](#objective)
+-	[Compilation command](#compilation-command)	
 -   [Requirements](#requirements)
 -   [Mandatory Tasks](#mandatory-tasks)
 -   [Features](#features)
@@ -13,14 +14,20 @@ The Printf project is a customized implementation of the printf function in the 
 
 ## Objective
 
-The objective of this project is to create a simplified version of the printf function to understand the underlying concepts related to variable arguments and format specifiers in C.
+The objective of this project is to create our own printf function to understand the underlying concepts related to variable arguments and format specifiers in C.
+
+## Compilation command
+
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
 
 ## Requirements
 
+-	Allowed editors: `vi`, `vim`, `emacs`
 -   All files will be compiled on Ubuntu 20.04 LTS
--   Programs and functions will be compiled with gcc 4.8.4 using flags -Wall -Werror -Wextra and -pedantic
--   Code must follow the Betty style
+-   Code must follow the `Betty` style
 -   Global variables are not allowed
+-	No more than  functions per file
+-	All prototypes for functions should be included in our header file `main.h`
 -   Authorized functions and macros:
 	- write (man 2 write)
 	- malloc (man 3 malloc)
@@ -32,25 +39,35 @@ The objective of this project is to create a simplified version of the printf fu
 
 ## Mandatory Tasks
 
--   Write function that produces output with conversion specifiers c, s, and %.
+### Task 0
+	
+	-   Write function that produces output with conversion specifiers c, s, and %.
+
+### Task 1
+
 -   Handle conversion specifiers d, i.
+
+### Task 2
+
 -   Create a man page for your function.
 
 ## Features
 
-printf supports the following format specifiers:
+\_printf supports the following format specifiers:
 
--   %c: character
--   %s: string of characters
--   %d or %i: signed integer in base 10
+-   %c: prints a single character
+-   %s: prints a string of characters
+-	%%: prints a literal '%' character
+-   %d: prints a decimal number 
+-	%i: signed integer number
 
-More information with the command: `man _printf`
+More information with the command: `man ./man_3_printf` or on our man page
 
 ## Installation
 
 1.  Clone this repository on your local machine:
 
-`git clone https://github.com/Julieed-971/holbertonschool-printf.git`
+`git clone [https://github.com/Julieed-971/holbertonschool-printf.git]`
 
 2.  Compile the source files with the following command:
 
@@ -58,6 +75,6 @@ More information with the command: `man _printf`
 
 ## Authors
 #### Julie Dedieu
--   Github: https://github.com/Julieed-971
+-   Github: [@Julieed-971](https://github.com/Julieed-971)
 #### Saadi Khemchane
--   Github: https://github.com/SaadiKhemchane
+-   Github: [@SaadiKhemchane](https://github.com/SaadiKhemchane)
