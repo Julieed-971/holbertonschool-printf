@@ -1,56 +1,89 @@
-.TH "_PRINTF" "3" "24 November 2023" "_PRINTF MAN PAGE"
+.TH _printf 3 "November 26, 2023" "Version 1.0" "User Commands"
 
 .SH NAME
-_printf \- write formatted output to stdout
+\fB_printf\fR \- mimic the standard printf function and writes formatted date to the standard output.
 
 .SH SYNOPSIS
-\fB#include <main.h>\fR
-.br
+.P
 \fBint _printf(const char *format, ...);\fR
 
+.P
+\fB#include "main.h"\fR
+
 .SH DESCRIPTION
-The \fB_printf\fR function writes formatted output to stdout. It is similar to the standard C \fBprintf\fR function but with a limited set of supported format specifiers.
+The \fB_printf\fR function mimics the behavior of the standard \fBprintf\fR function and is designed to print formatted output to the standard output stream.
+The function scans the string and writes each character to the standard output. When faced with a conversion specifier, the function will call other functions via a va_list, which will convert and write the following characters according to the functions invoked.
 
-The format string may contain conversion specifiers, each beginning with a '%' character, followed by a conversion character.
+.SH CONVERSION SPECIFIERS
 
-Supported conversion characters:
-.RS
-.TP
-\fB%c\fR
-Prints a character.
+.TP 10
+\fB%c:\fR 
+Prints a single character.
 
-.TP
-\fB%s\fR
-Prints a string.
+.TP 10
+\fB%s:\fR 
+Prints a null-terminated string of characters.
 
-.TP
-\fB%%\fR
-Prints a percent sign.
+.TP 10
+\fB%%:\fR 
+Prints a single percent sign.
 
-.TP
-\fB%d\fR, \fB%i\fR
-Prints an integer.
+.TP 10
+\fB%d:\fR 
+Prints a decimal number.
 
-.RE
+.TP 10
+\fB%i:\fR 
+Prints an integer number.
+
+.PP
+\fBFlags, Field Width, Precision, Length Modifier:\fR
+This simplified version of \fB_printf\fR does not support flags, field width, precision, or length modifiers.
 
 .SH RETURN VALUE
-Returns the number of characters printed (excluding the null byte used to end the output).
+The function returns the number of characters printed (excluding the null byte used to end the output to strings).
+If format is NULL or ends with a %, the function returns -1.
 
 .SH EXAMPLES
-The following example demonstrates the usage of \fB_printf\fR:
+The following examples illustrates the use of the _printf function:
 
-.BR
-.B #include "main.h"
-.br
-.B int main(void) {
-.B _printf("Hello, %s!\n", "world");
-.B return 0;
-.B }
+    \fBlen = _printf("Printf is so much fun!\\n");\fR
+    \fBOutput : "Printf is so much fun!"\fR
 
-.SH SEE ALSO
-.BR printf (3), putchar(3)
+    \fB_printf("Length:[%d, %i]\\n", len, len);\fR
+    \fBOutput: "Length:[24, 24]".\fR
 
-.SH AUTHOR
-This man page was written by Julie Dedieu and Saadi Khemchane.
+    \fB_printf("Negative:[%d]\\n", -823405);\fR
+    \fBOutput: "Negative:[-823405]".\fR
+
+    \fB_printf("Character:[%c]\\n", 'A');\fR
+    \fB"Output: "Character:[A]".\fR
+
+    \fB_printf("String:[%s]\\n", "Learning for a lifetime");\fR
+    \fBOutput: "Learning for a lifetime".\fR
+
+    \fBlen = _printf("Percent:[%%]\\n");\fR
+    \fBOutput: "Percent:[%]".\fR
+
+    \fB_printf("Len:[%d]\\n", len);\fR
+    \fB"Output: "Len:[24]".\fR
+
+    \fB_printf("Unknown:[%r]\\n");\fR
+    \fBOutput: "Unknown:[%r]".\fR
+
+    \fB_printf("Len:[%d]\\n", INT_MIN);\fR
+    \fBOutput: "Len:[-2147483648]".\fR
+
+.SH AUTHORS
+.P
+Written by \fBJulie Dedieu\fP and \fBSaadi Khemchane\fP.
 
 .SH COPYRIGHT
+.P
+Copyright (C) 2023, Julie Dedieu.
+This is a free software: feel free to change and redistribute it.
+NO WARRANTY, to the extent permitted by law.
+
+.SH DATE
+November 26, 2023
+SH COPYRIGHT
