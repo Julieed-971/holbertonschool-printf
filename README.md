@@ -51,7 +51,7 @@ The objective of this project is to create our own printf function to understand
 
 -   Create a man page for your function.
 
-## Features
+## Specifiers
 
 \_printf supports the following format specifiers:
 
@@ -60,6 +60,72 @@ The objective of this project is to create our own printf function to understand
 -	%%: prints a literal '%' character
 -   %d: prints a decimal number 
 -	%i: signed integer number
+
+## Examples and tests
+
+My own tests in comparison with the standard printf function(main.c file):
+
+*Input*
+
+```c
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+        int len;
+        int len2;
+
+        len = _printf("Printf is so much fun!\n");
+        len2 = printf("Printf is so much fun!\n");
+        _printf("Length:[%d, %i]\n", len, len);
+        printf("Length:[%d, %i]\n", len2, len2);
+        _printf("Negative:[%d]\n", -823405);
+        printf("Negative:[%d]\n", -823405);
+        _printf("Character:[%c]\n", 'A');
+        printf("Character:[%c]\n", 'A');
+        _printf("String:[%s]\n", "Learning for a lifetime");
+        printf("String:[%s]\n", "Learning for a lifetime");
+        len = _printf("Percent:[%%]\n");
+        len2 = printf("Percent:[%%]\n");
+        _printf("Len:[%d]\n", len);
+        printf("Len:[%d]\n", len2);
+        _printf("Unknown:[%r]\n");
+        printf("Unknown:[%r]\n");
+        _printf("Len:[%d]\n", INT_MIN);
+        printf("Len:[%d]\n", INT_MIN);
+        return (0);
+}
+```
+
+*Output*
+
+```c
+Printf is so much fun!
+Printf is so much fun!
+Length:[23, 23]
+Length:[23, 23]
+Negative:[-823405]
+Negative:[-823405]
+Character:[A]
+Character:[A]
+String:[Learning for a lifetime]
+String:[Learning for a lifetime]
+Percent:[%]
+Percent:[%]
+Len:[12]
+Len:[12]
+Unknown:[%r]
+Unknown:[%r]
+Len:[-2147483648]
+Len:[-2147483648]
+```
 
 ## Man page
 More information with the command: `man ./man_3_printf` or on our man page
@@ -77,6 +143,11 @@ More information with the command: `man ./man_3_printf` or on our man page
 2.  Compile the source files with the following command:
 
 ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o 0-printf```
+
+## Thanks
+
+Special thanks to my #C22 peers Rodrigues, and his infinite patience, Yasine, Theo, Nathan, Gilles, Chloe and Elie. 
+Very special thanks to Fabien, Yoann and Xavier, the absolute best tutors that can ever be !
 
 ## Authors
 #### Julie Dedieu
