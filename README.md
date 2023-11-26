@@ -106,7 +106,7 @@ int main(void)
 
 *Output*
 
-`
+```
 Printf is so much fun!
 Printf is so much fun!
 Length:[23, 23]
@@ -125,7 +125,7 @@ Unknown:[%r]
 Unknown:[%r]
 Len:[-2147483648]
 Len:[-2147483648]
-`
+```
 
 ## Man page
 More information with the command: `man ./man_3_printf` or on our man page
@@ -140,7 +140,7 @@ More information with the command: `man ./man_3_printf` or on our man page
 
 1.  Clone this repository on your local machine:
 
-`git clone` [https://github.com/Julieed-971/holbertonschool-printf.git]
+`git clone` https://github.com/Julieed-971/holbertonschool-printf.git
 
 2.  Compile the source files with the following command:
 
