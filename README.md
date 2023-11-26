@@ -41,11 +41,11 @@ The objective of this project is to create our own printf function to understand
 
 ### Task 0
 	
-	-   Write function that produces output with conversion specifiers c, s, and %.
+-   Write a function that produces output according to a format and the following conversion specifiers `c`, `s`, and `%`.
 
 ### Task 1
 
--   Handle conversion specifiers d, i.
+-   Handle the following conversion specifiers `d`, `i`.
 
 ### Task 2
 
@@ -61,13 +61,16 @@ The objective of this project is to create our own printf function to understand
 -   %d: prints a decimal number 
 -	%i: signed integer number
 
+## Man page
 More information with the command: `man ./man_3_printf` or on our man page
+
+![Image](https://github.com/Julieed-971/holbertonschool-printf/blob/master/Other_files_and_tests/C%20-%20Printf%20flowchart.png)
 
 ## Installation
 
 1.  Clone this repository on your local machine:
 
-`git clone [https://github.com/Julieed-971/holbertonschool-printf.git]`
+`git clone [https://github.com/Julieed-971/holbertonschool-printf.git]:https://github.com/Julieed-971/holbertonschool-printf.git`
 
 2.  Compile the source files with the following command:
 
