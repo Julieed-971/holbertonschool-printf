@@ -106,7 +106,7 @@ int main(void)
 
 *Output*
 
-```c
+`
 Printf is so much fun!
 Printf is so much fun!
 Length:[23, 23]
@@ -125,10 +125,12 @@ Unknown:[%r]
 Unknown:[%r]
 Len:[-2147483648]
 Len:[-2147483648]
-```
+`
 
 ## Man page
 More information with the command: `man ./man_3_printf` or on our man page
+
+![Image](https://github.com/Julieed-971/holbertonschool-printf/blob/master/Other_files_and_tests/man_3_printf.png)
 
 ## Flowchart
 
